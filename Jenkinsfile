@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     openshift.withCluster() {
-                        openshift.withProject("dev-app02") {
+                        openshift.withProject("dev-app03") {
                             if (!openshift.selector("bc", "${APP}").exists()) {
                                 openshift.newBuild("--image-stream=redhat-openjdk18-openshift:1.2", "--name=${APP}", "--binary=true");                   
                             }
@@ -40,7 +40,7 @@ pipeline {
             steps {
                 script {
                     openshift.withCluster() {
-                        openshift.withProject("dev-app02") {
+                        openshift.withProject("dev-app03") {
                             if (!openshift.selector("dc", "${APP}").exists()) {
                                 createApp("${APP}", "latest");                   
                             } else {
