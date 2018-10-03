@@ -6,7 +6,6 @@
   <artifactId>hello-openshift</artifactId>
   <name>Hello OpenShift</name>
   <version>1.0.0</version>
-  <packaging>war</packaging>
 
   <properties>
     <version.wildfly.swarm>2018.4.1</version.wildfly.swarm>
